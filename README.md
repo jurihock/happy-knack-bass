@@ -1,2 +1,3 @@
-# happy-knack-bass
-Ladi Geisler-style "Knack-Bass" effect for that happy feeling
+# Happy Knack-Bass
+
+While I do code, just listen to this [happy song](https://www.youtube.com/watch?v=r62OwUdOFdg)...
