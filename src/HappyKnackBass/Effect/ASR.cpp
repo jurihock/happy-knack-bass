@@ -33,7 +33,7 @@ void ASR::operator()(const std::span<const float> input, const std::span<float> 
     if (j >= n)
     {
       output[i] = 0;
-      return;
+      continue;
     }
 
     output[i] = 1;
