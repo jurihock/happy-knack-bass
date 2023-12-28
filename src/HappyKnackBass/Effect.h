@@ -1,6 +1,8 @@
 #pragma once
 
-#include <span>
+#include <HappyKnackBass/Effect/Filter.h>
+#include <HappyKnackBass/Effect/Trigger.h>
+#include <HappyKnackBass/Effect/ASR.h>
 
 class Effect final
 {
@@ -17,7 +19,22 @@ public:
 
 private:
 
-  const double samplerate;
-  const int blocksize;
+  Filter filter;
+  Trigger trigger;
+  ASR asr;
+
+  struct
+  {
+    double samplerate;
+    int blocksize;
+  }
+  data;
+
+  struct
+  {
+    std::vector<float> response;
+    std::vector<float> envelope;
+  }
+  buffer;
 
 };
