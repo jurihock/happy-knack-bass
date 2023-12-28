@@ -4,6 +4,10 @@
 #include <HappyKnackBass/Effect/Trigger.h>
 #include <HappyKnackBass/Effect/ASR.h>
 
+#include <algorithm>
+#include <span>
+#include <vector>
+
 class Effect final
 {
 
