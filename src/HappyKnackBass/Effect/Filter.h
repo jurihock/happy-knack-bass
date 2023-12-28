@@ -25,7 +25,7 @@ private:
 
   struct
   {
-    std::array<float, 3> b, a, x, y;
+    std::array<double, 3> b, a, x, y;
   }
   buffer;
 
