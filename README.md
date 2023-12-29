@@ -1,6 +1,6 @@
 # Vintage Knack-Bass Plugin
 
-The basic idea of this plugin is to imitate the vintage _click_ or _knack_ sound as played by [Ladi Geisler](https://en.wikipedia.org/wiki/Ladi_Geisler) and many other bassists.
+The intended purpose of this plugin is to create the percussive _click_ or _knack_ sound as played by [Ladi Geisler](https://en.wikipedia.org/wiki/Ladi_Geisler) and many other bassists. This is achieved by temporarily boosting the high frequencies of the input signal when a note is being played.
 
 ## Inspirations 🎵
 
