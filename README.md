@@ -1,3 +1,12 @@
 # Vintage Knack-Bass Plugin
 
-While I do code, just listen to this [happy song](https://www.youtube.com/watch?v=r62OwUdOFdg)...
+The basic idea of this plugin is to imitate the vintage _click_ or _knack_ sound as played by [Ladi Geisler](https://en.wikipedia.org/wiki/Ladi_Geisler) and many other bassists.
+
+## Inspirations 🎵
+
+* [That Happy Feeling (Bert Kaempfert)](https://www.youtube.com/watch?v=r62OwUdOFdg)
+* [Je t'aime… moi non plus (Serge Gainsbourg)](https://www.youtube.com/watch?v=JIQiGN-vO-g)
+* [A Song About Weather (Andrey Petrov)](https://www.youtube.com/watch?v=hz0LW-Omnxo)
+* [Groovin' With Mr. Bloe (Mr. Bloe)](https://www.youtube.com/watch?v=S1ydA_AV1Hk)
+* [Everlasting Love (The Love Affair)](https://www.youtube.com/watch?v=JaYTNsS_m2w)
+
