@@ -73,9 +73,9 @@ def asr(x, a, s, r, sr):
     s = int(s * sr)
     r = int(r * sr)
 
-    a = np.ones(a) # np.linspace(0, 1, a)
+    a = np.linspace(0, 1, a)
     s = np.ones(s)
-    r = np.ones(r) # np.linspace(1, 0, r)
+    r = np.linspace(1, 0, r)
 
     shape = np.concatenate((a, s, r))
     peaks = np.flatnonzero(x)
@@ -121,20 +121,13 @@ if __name__ == '__main__':
 
     f = biquad.highpass(sr, f=1000, g=24, q=10)(x)
 
-    dry = x.copy()
-    wet = f.copy()
+    dry = x * (1 - e)
+    wet = f * e
 
-    on  = e > 0
-    off = np.invert(on)
-
-    dry[on] *= 1 - e[on]
-    wet[on] *= e[on]
-    wet[off] = 0
-
-    y = dry + wet
+    y = np.clip(dry + wet, -1, +1)
 
     dasp.io.write(f'{file}.flt', f, sr)
     dasp.io.write(f'{file}.mix', y, sr)
 
     # dasp.io.play(f'{file}.flt')
-    dasp.io.play(f'{file}.mix')
+    # dasp.io.play(f'{file}.mix')

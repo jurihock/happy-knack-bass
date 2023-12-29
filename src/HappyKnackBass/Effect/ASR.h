@@ -1,7 +1,7 @@
 #pragma once
 
-#include <limits>
 #include <span>
+#include <vector>
 
 class ASR final
 {
@@ -23,6 +23,7 @@ private:
 
   struct
   {
+    std::vector<float> shape;
     size_t cursor;
   }
   buffer;

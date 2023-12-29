@@ -40,13 +40,9 @@ void Effect::wet(const std::span<const float> input, const std::span<float> outp
 
   for (size_t i = 0; i < input.size(); ++i)
   {
-    if (envelope[i])
-    {
-      output[i] = std::clamp(response[i], -1.f, +1.f);
-    }
-    else
-    {
-      output[i] = std::clamp(input[i], -1.f, +1.f);
-    }
+    const float x = input[i] * (1 - envelope[i]);
+    const float y = response[i] * envelope[i];
+
+    output[i] = std::clamp(x + y, -1.f, +1.f);
   }
 }
