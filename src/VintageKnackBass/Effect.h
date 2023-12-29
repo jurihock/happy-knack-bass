@@ -13,6 +13,7 @@ public:
   ~Effect();
 
   int latency() const;
+  bool compatible(const int blocksize) const;
 
   void dry(const std::span<const float> input, const std::span<float> output);
   void wet(const std::span<const float> input, const std::span<float> output);

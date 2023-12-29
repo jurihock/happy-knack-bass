@@ -46,7 +46,7 @@ private:
   struct State
   {
     double samplerate {};
-    int    blocksize  {};
+    int blocksize {};
   };
 
   const State nostate;

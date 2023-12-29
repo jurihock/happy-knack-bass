@@ -21,6 +21,11 @@ int Effect::latency() const
   return 0;
 }
 
+bool Effect::compatible(const int blocksize) const
+{
+  return blocksize <= data.blocksize;
+}
+
 void Effect::dry(const std::span<const float> input, const std::span<float> output)
 {
   std::copy(input.begin(), input.end(), output.begin());

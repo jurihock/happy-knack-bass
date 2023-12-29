@@ -189,6 +189,29 @@ void Processor::processBlock(juce::AudioBuffer<float>& audio, juce::MidiBuffer& 
   {
     process_stereo_output("effect is not initialized");
   }
+  else if (!effect->compatible(channel_samples))
+  {
+    State oldstate = state.value();
+    State newstate = oldstate;
+
+    newstate.blocksize = channel_samples;
+
+    LOG("Change blocksize from %d to %d", oldstate.blocksize, newstate.blocksize);
+
+    try
+    {
+      resetEffect(newstate);
+
+      state = newstate;
+
+      process_mono_input();
+      process_stereo_output();
+    }
+    catch(const std::exception& exception)
+    {
+      process_stereo_output(exception.what());
+    }
+  }
   else
   {
     try
@@ -207,7 +230,7 @@ void Processor::processBlock(juce::AudioBuffer<float>& audio, juce::MidiBuffer& 
   if (LAP())
   {
     const double samplerate = state.value_or(nostate).samplerate;
-    const int blocksize  = channel_samples; // state.value_or(nostate).blocksize.max;
+    const int blocksize = state.value_or(nostate).blocksize;
 
     juce::ignoreUnused(samplerate, blocksize);
 
