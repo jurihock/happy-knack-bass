@@ -2,6 +2,9 @@ name: build.yml
 
 on: [push, pull_request]
 
+env:
+  PLUGIN: VintageKnackBass
+
 jobs:
 
   build:
@@ -61,5 +64,5 @@ jobs:
       if:     github.event_name == 'push'
       uses:   actions/upload-artifact@master
       with:
-        name: VintageKnackBass-${{matrix.os}}
-        path: ./build/VintageKnackBass_artefacts/Release
+        name: $PLUGIN-${{matrix.os}}
+        path: ./build/$PLUGIN_artefacts/Release
