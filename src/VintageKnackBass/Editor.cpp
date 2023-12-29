@@ -1,6 +1,6 @@
-#include <HappyKnackBass/Editor.h>
+#include <VintageKnackBass/Editor.h>
 
-#include <HappyKnackBass/Logger.h>
+#include <VintageKnackBass/Logger.h>
 
 Editor::Editor(juce::AudioProcessor& process) :
   juce::GenericAudioProcessorEditor(process)

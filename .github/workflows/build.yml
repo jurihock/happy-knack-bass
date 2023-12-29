@@ -61,5 +61,5 @@ jobs:
       if:     github.event_name == 'push'
       uses:   actions/upload-artifact@master
       with:
-        name: HappyKnackBass-${{matrix.os}}
-        path: ./build/HappyKnackBass_artefacts/Release
+        name: VintageKnackBass-${{matrix.os}}
+        path: ./build/VintageKnackBass_artefacts/Release

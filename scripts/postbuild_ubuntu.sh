@@ -8,7 +8,7 @@ CONFIG=Release
 INPUT=${ROOT}
 OUTPUT=${ROOT}/build
 
-ARTEFACTS=${OUTPUT}/HappyKnackBass_artefacts/${CONFIG}
+ARTEFACTS=${OUTPUT}/VintageKnackBass_artefacts/${CONFIG}
 PLUGINVAL=${OUTPUT}/_deps/pluginval-src/pluginval
 
 # If specified, avoids tests that create GUI windows,
@@ -17,14 +17,14 @@ PLUGINVAL=${OUTPUT}/_deps/pluginval-src/pluginval
 export SKIP_GUI_TESTS=1
 
 # Execute pluginval.
-"${PLUGINVAL}" ${ARGS} "${ARTEFACTS}/VST3/HappyKnackBass.vst3" || exit $?
+"${PLUGINVAL}" ${ARGS} "${ARTEFACTS}/VST3/VintageKnackBass.vst3" || exit $?
 
 # Delete intermediate files.
-rm -fv "${ARTEFACTS}/libHappyKnackBass_SharedCode.a" || exit $?
+rm -fv "${ARTEFACTS}/libVintageKnackBass_SharedCode.a" || exit $?
 
 # Zip binaries to preserve file permissions during artifact upload.
 # https://github.com/actions/upload-artifact/issues/38
 # https://github.com/actions/upload-artifact#permission-loss
 pushd "${ARTEFACTS}"
-zip -rm HappyKnackBass.zip . || exit $?
+zip -rm VintageKnackBass.zip . || exit $?
 popd

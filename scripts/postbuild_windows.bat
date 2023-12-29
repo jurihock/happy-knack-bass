@@ -13,11 +13,11 @@ set CONFIG=Release
 set INPUT=%ROOT%
 set OUTPUT=%ROOT%\build
 
-set ARTEFACTS=%OUTPUT%\HappyKnackBass_artefacts\%CONFIG%
+set ARTEFACTS=%OUTPUT%\VintageKnackBass_artefacts\%CONFIG%
 set PLUGINVAL=%OUTPUT%\_deps\pluginval-src\pluginval.exe
 
-"%PLUGINVAL%" %ARGS% "%ARTEFACTS%\VST3\HappyKnackBass.vst3" || exit /b
+"%PLUGINVAL%" %ARGS% "%ARTEFACTS%\VST3\VintageKnackBass.vst3" || exit /b
 
-del /q "%ARTEFACTS%\HappyKnackBass_SharedCode.lib"
-del /q "%ARTEFACTS%\VST3\HappyKnackBass.exp"
-del /q "%ARTEFACTS%\VST3\HappyKnackBass.lib"
+del /q "%ARTEFACTS%\VintageKnackBass_SharedCode.lib"
+del /q "%ARTEFACTS%\VST3\VintageKnackBass.exp"
+del /q "%ARTEFACTS%\VST3\VintageKnackBass.lib"

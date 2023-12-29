@@ -1,6 +1,6 @@
-#include <HappyKnackBass/Parameters.h>
+#include <VintageKnackBass/Parameters.h>
 
-#include <HappyKnackBass/Logger.h>
+#include <VintageKnackBass/Logger.h>
 
 Parameters::Parameters(juce::AudioProcessor& process) :
   GenericParameterContainer(process)
@@ -40,7 +40,7 @@ void Parameters::load(const void* data, const int size)
       return;
     }
 
-    if (xml->hasTagName("HappyKnackBass") == false) { return; }
+    if (xml->hasTagName("VintageKnackBass") == false) { return; }
     if (xml->getIntAttribute("schema") != schema) { return; }
 
     read<bool>("bypass", *xml);
@@ -57,7 +57,7 @@ void Parameters::save(juce::MemoryBlock& data)
 {
   try
   {
-    auto xml = std::make_unique<juce::XmlElement>("HappyKnackBass");
+    auto xml = std::make_unique<juce::XmlElement>("VintageKnackBass");
 
     xml->setAttribute("schema", schema);
 

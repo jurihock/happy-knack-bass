@@ -2,8 +2,8 @@
 
 #include <JuceHeader.h>
 
-#include <HappyKnackBass/Parameters/GenericParameterListener.h>
-#include <HappyKnackBass/Parameters/GenericParameterSubscription.h>
+#include <VintageKnackBass/Parameters/GenericParameterListener.h>
+#include <VintageKnackBass/Parameters/GenericParameterSubscription.h>
 
 class GenericParameterContainer
 {

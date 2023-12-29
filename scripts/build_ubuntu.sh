@@ -8,7 +8,7 @@ CONFIG=Release
 INPUT=${ROOT}
 OUTPUT=${ROOT}/build
 
-ARTEFACTS=${OUTPUT}/HappyKnackBass_artefacts/${CONFIG}
+ARTEFACTS=${OUTPUT}/VintageKnackBass_artefacts/${CONFIG}
 
 cmake ${ARGS} -DCMAKE_BUILD_TYPE=${CONFIG} -S "${INPUT}" -B "${OUTPUT}" || exit $?
 cmake --build "${OUTPUT}" || exit $?

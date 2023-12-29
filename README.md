@@ -1,3 +1,3 @@
-# Happy Knack-Bass
+# Vintage Knack-Bass Plugin
 
 While I do code, just listen to this [happy song](https://www.youtube.com/watch?v=r62OwUdOFdg)...

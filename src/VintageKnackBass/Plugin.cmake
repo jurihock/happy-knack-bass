@@ -10,13 +10,13 @@ endif()
 
 juce_add_plugin(${CMAKE_PROJECT_NAME}
   PLUGIN_NAME                   "${CMAKE_PROJECT_NAME} v${CMAKE_PROJECT_VERSION}"
-  DESCRIPTION                   "Ladi Geisler-style \\\"Knack-Bass\\\" effect for that happy feeling"
+  DESCRIPTION                   "Ladi Geisler-style \\\"Knack-Bass\\\" audio effect"
   PRODUCT_NAME                  "${CMAKE_PROJECT_NAME}"
   VERSION                       "${CMAKE_PROJECT_VERSION}"
   COMPANY_NAME                  "jurihock"
   COMPANY_EMAIL                 "juergen.hock@jurihock.de"
-  COMPANY_WEBSITE               "https://github.com/jurihock/happy-knack-bass"
-  BUNDLE_ID                     "de.jurihock.happyknackbass"
+  COMPANY_WEBSITE               "https://github.com/jurihock/vintage-knack-bass"
+  BUNDLE_ID                     "de.jurihock.vintageknackbass"
   PLUGIN_MANUFACTURER_CODE      "Hock"
   PLUGIN_CODE                   "Knak"
   IS_SYNTH                      FALSE

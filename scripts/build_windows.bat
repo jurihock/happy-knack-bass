@@ -13,7 +13,7 @@ set CONFIG=Release
 set INPUT=%ROOT%
 set OUTPUT=%ROOT%\build
 
-set ARTEFACTS=%OUTPUT%\HappyKnackBass_artefacts\%CONFIG%
+set ARTEFACTS=%OUTPUT%\VintageKnackBass_artefacts\%CONFIG%
 
 cmake %ARGS% -S "%INPUT%" -B "%OUTPUT%" || exit /b
 cmake --build "%OUTPUT%" --config %CONFIG% || exit /b

@@ -2,7 +2,7 @@
 
 #include <JuceHeader.h>
 
-#include <HappyKnackBass/Parameters/GenericParameterListener.h>
+#include <VintageKnackBass/Parameters/GenericParameterListener.h>
 
 class GenericParameterSubscription final
 {

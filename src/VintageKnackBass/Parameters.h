@@ -2,7 +2,7 @@
 
 #include <JuceHeader.h>
 
-#include <HappyKnackBass/Parameters/GenericParameterContainer.h>
+#include <VintageKnackBass/Parameters/GenericParameterContainer.h>
 
 #include <bit>
 

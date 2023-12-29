@@ -1,6 +1,6 @@
-#include <HappyKnackBass/Processor.h>
+#include <VintageKnackBass/Processor.h>
 
-#include <HappyKnackBass/Logger.h>
+#include <VintageKnackBass/Logger.h>
 
 Processor::Processor() :
   juce::AudioProcessor(

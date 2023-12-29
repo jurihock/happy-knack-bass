@@ -1,8 +1,8 @@
 #pragma once
 
-#include <HappyKnackBass/Effect/Filter.h>
-#include <HappyKnackBass/Effect/Trigger.h>
-#include <HappyKnackBass/Effect/ASR.h>
+#include <VintageKnackBass/Effect/Filter.h>
+#include <VintageKnackBass/Effect/Trigger.h>
+#include <VintageKnackBass/Effect/ASR.h>
 
 class Effect final
 {

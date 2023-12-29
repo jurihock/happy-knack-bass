@@ -1,4 +1,4 @@
-#include <HappyKnackBass/Effect.h>
+#include <VintageKnackBass/Effect.h>
 
 Effect::Effect(const double samplerate, const int blocksize) :
   filter(samplerate, 1000, 24, 10),

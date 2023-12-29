@@ -5,7 +5,7 @@ CONFIG    = Release
 PLATFORM  = -DCMAKE_OSX_ARCHITECTURES=arm64
 OPTIONS   = -DLOGGING=ON -DCHRONO=ON
 
-PLUGIN    = HappyKnackBass
+PLUGIN    = VintageKnackBass
 INPUT     = .
 OUTPUT    = ./build
 ARTEFACTS = $(OUTPUT)/$(PLUGIN)_artefacts/$(CONFIG)

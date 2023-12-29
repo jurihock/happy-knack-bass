@@ -1,4 +1,4 @@
-#include <HappyKnackBass/Effect/Filter.h>
+#include <VintageKnackBass/Effect/Filter.h>
 
 Filter::Filter(const double samplerate, const double frequency, const double gain, const double quality)
 {

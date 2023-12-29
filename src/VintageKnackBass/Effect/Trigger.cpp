@@ -1,4 +1,4 @@
-#include <HappyKnackBass/Effect/Trigger.h>
+#include <VintageKnackBass/Effect/Trigger.h>
 
 Trigger::Trigger(const double samplerate, const double window, const std::tuple<double, double> threshold)
 {

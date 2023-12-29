@@ -2,10 +2,10 @@
 
 #include <JuceHeader.h>
 
-#include <HappyKnackBass/Chronometer.h>
-#include <HappyKnackBass/Editor.h>
-#include <HappyKnackBass/Effect.h>
-#include <HappyKnackBass/Parameters.h>
+#include <VintageKnackBass/Chronometer.h>
+#include <VintageKnackBass/Editor.h>
+#include <VintageKnackBass/Effect.h>
+#include <VintageKnackBass/Parameters.h>
 
 class Processor final : public juce::AudioProcessor
 {
