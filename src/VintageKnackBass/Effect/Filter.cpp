@@ -21,24 +21,25 @@ void Filter::operator()(const std::span<const float> input, const std::span<floa
   const double r = 2 * std::numbers::pi / data.samplerate;
   const double w = f * r;
 
-  const double cosw = std::cos(w);
   const double sinw = std::sin(w);
+  const double cosw = std::cos(w);
 
   const double alpha = sinw / (+2 * q);
   const double beta  = cosw * (-2);
+  const double gamma = cosw + (+1);
 
   auto& b = buffer.b;
   auto& a = buffer.a;
   auto& x = buffer.x;
   auto& y = buffer.y;
 
-  b[1] = -(1 + cosw);
-  b[2] = b[1] / -2;
-  b[0] = b[2];
+  b[0] = gamma / (+2);
+  b[1] = gamma * (-1);
+  b[2] = gamma / (+2);
 
-  a[1] = beta;
-  a[2] = 1 - alpha;
   a[0] = 1 + alpha;
+  a[1] =     beta;
+  a[2] = 1 - alpha;
 
   for (size_t i = 0; i < input.size(); ++i)
   {
