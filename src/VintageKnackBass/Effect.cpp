@@ -28,11 +28,8 @@ void Effect::dry(const std::span<const float> input, const std::span<float> outp
 
 void Effect::wet(const std::span<const float> input, const std::span<float> output)
 {
-  auto& response = buffer.response;
-  auto& envelope = buffer.envelope;
-
-  response.resize(input.size());
-  envelope.resize(input.size());
+  std::span<float> response(buffer.response.data(), input.size());
+  std::span<float> envelope(buffer.envelope.data(), input.size());
 
   filter(input, response);
   trigger(input, envelope);
