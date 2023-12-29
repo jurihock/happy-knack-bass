@@ -64,5 +64,5 @@ jobs:
       if:     github.event_name == 'push'
       uses:   actions/upload-artifact@master
       with:
-        name: $PLUGIN-${{matrix.os}}
-        path: ./build/$PLUGIN_artefacts/Release
+        name: ${{env.PLUGIN}}-${{matrix.os}}
+        path: ./build/${{env.PLUGIN}}_artefacts/Release
