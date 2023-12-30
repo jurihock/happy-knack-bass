@@ -1,5 +1,6 @@
 #include <VintageKnackBass/Processor.h>
 
+#include <VintageKnackBass/Chronometer.h>
 #include <VintageKnackBass/Logger.h>
 
 Processor::Processor() :
@@ -253,5 +254,3 @@ void Processor::resetEffect(const State& state)
 
   setLatencySamples(latency);
 }
-
-juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter() { return new Processor(); }

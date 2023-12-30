@@ -2,7 +2,6 @@
 
 #include <JuceHeader.h>
 
-#include <VintageKnackBass/Chronometer.h>
 #include <VintageKnackBass/Editor.h>
 #include <VintageKnackBass/Effect.h>
 #include <VintageKnackBass/Parameters.h>
